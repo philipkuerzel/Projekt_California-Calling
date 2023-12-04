@@ -2,7 +2,7 @@
 
 @use 'mixin' as mixins;
 
-@import "font";
+@import "font" ;
 
 
 /* Global Styling */
@@ -11,35 +11,183 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'inter';
+    font-size: 16px;
+}
+
+h1 {
+    font-size: variables.$h1size;
+}
+
+h2 {
+    font-size: variables.$h2size;
+}
+
+h3 {
+    font-size: variables.$h3size;
+}
+
+.image {
+    position: absolute
 }
 
 /* Header */
 
 header {
     @include mixins.flex;
-    color: white;
+    color: variables.$main-colorW;
     background-color: variables.$main-colorB;
     align-items: center;
-    gap: 15vh;
-    padding-top: 10vh;
-    padding-bottom: 5vh;
+    gap: 20vh;
+    padding-top: 25vh;
+    padding-bottom: 10vh;
     article {
         @include mixins.flex;
         text-align: center;
-        gap: 1vh;
         p {
             font-size: variables.$p-header;
         }
         h4 {
             font-size: variables.$h4size;
+            font-family: 'bold';
         }
         h4:nth-of-type(2) {
             color: variables.$main-colorB;
+            text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
         }
     }
     aside {
         display: flex;
         justify-content: space-between;
+        width: 80%;
+        .button {
+        @include mixins.button;
+        &:hover {
+            background-color: white;
+            color: black;
+            transition: 0.3s;
+            }
+        }
+    }
+}
+
+/* Main */
+
+.storyWrap {
+    background-color: variables.$main-colorB;
+    padding-left: 10vw;
+    color: variables.$main-colorW;
+    padding-top: 5vh;
+    padding-bottom: 15vh;
+    h1 {
         width: 70%;
+        margin-bottom: 15vh;
+    }
+    article {
+        display: flex;
+        justify-content: space-between;
+        div p {
+            font-size: variables.$p-storyWrap;
+        }
+        img {
+            width: 30%;
+        }
+    }
+}
+
+.action {
+    position: relative;
+    height: 1800px;
+
+    .imageB {
+        @include mixins.imageB;
+    }
+    .imageA {
+        @include mixins.imageA;
+    }
+    .img1 {
+        right: 10vh;
+        top: -10vh;
+    }
+    .img2 {
+        left: 54px;
+        top: 280px;
+    }
+    div {
+        position: absolute;
+        width: 447px;
+        top: 410px;
+        left: 438px;
+    }
+    div p {
+        width: 411px;
+        font-size: variables.$p-action;
+        line-height: 3vh;
+    }
+    .img3 {
+        right: 0;
+        top: 665px;
+    }
+    .img4 {
+        left: 219px;
+        bottom:700px;
+    }
+    .img5 {
+        right: 165px;
+        bottom: 583px;
+    }
+    .img6 {
+        left: 0px;
+        bottom: 320px;
+    }
+    .shirts {
+        width: 30%;
+        position: absolute;
+        left: 438px;
+        bottom: 310px;
+    }
+    .img7 {
+        position: absolute;
+        width: 438px;
+        right: 274px;
+        bottom: -68px;
+        z-index: -1;
+    }
+}
+
+.goldenbear {
+    @include mixins.bear;
+    height: 1200px;
+    background-color: variables.$main-colorB;
+    color: variables.$main-colorW;
+    padding-top: 170px;
+    .number {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 30vh;
+        .artist p {
+            font-family: 'bold';
+            font-size: 1.8rem
+        }
+        .artist p:nth-of-type(2) {
+            font-size: variables.$p-artist;
+            font-family:'work';
+            margin-top: 2vh;
+        }
+    }
+    .bears {
+        background-color: variables.$main-colorB;
+        position: relative;
+        .img8 {
+            width: 730px;
+            left: 0;
+            top: 168px;
+        }
+        .img9 {
+            width: 366px;
+            right: 130px;
+            top: 333px;
+        }
     }
 }

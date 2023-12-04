@@ -10,11 +10,33 @@
   font-family: "light";
   src: url("../fonts/Inter-Light.ttf");
 }
+@font-face {
+  font-family: "work";
+  src: url("../fonts/WorkSans-Regular.ttf");
+}
 /* Global Styling */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "inter";
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5.375rem;
+}
+
+h3 {
+  font-size: 5.1rem;
+}
+
+.image {
+  position: absolute;
 }
 
 /* Header */
@@ -24,29 +46,163 @@ header {
   color: white;
   background-color: black;
   align-items: center;
-  gap: 15vh;
-  padding-top: 10vh;
-  padding-bottom: 5vh;
+  gap: 20vh;
+  padding-top: 25vh;
+  padding-bottom: 10vh;
 }
 header article {
   display: flex;
   flex-direction: column;
   text-align: center;
-  gap: 1vh;
 }
 header article p {
   font-size: 0.75rem;
 }
 header article h4 {
   font-size: 4rem;
+  font-family: "bold";
 }
 header article h4:nth-of-type(2) {
   color: black;
+  text-shadow: 0 0 2px white, 0 0 2px white, 0 0 2px white, 0 0 2px white;
 }
 header aside {
   display: flex;
   justify-content: space-between;
+  width: 80%;
+}
+header aside .button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: 1px solid #AAA;
+  text-decoration: none;
+}
+header aside .button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
+/* Main */
+.storyWrap {
+  background-color: black;
+  padding-left: 10vw;
+  color: white;
+  padding-top: 5vh;
+  padding-bottom: 15vh;
+}
+.storyWrap h1 {
   width: 70%;
+  margin-bottom: 15vh;
+}
+.storyWrap article {
+  display: flex;
+  justify-content: space-between;
+}
+.storyWrap article div p {
+  font-size: 0.875rem;
+}
+.storyWrap article img {
+  width: 30%;
+}
+
+.action {
+  position: relative;
+  height: 1800px;
+}
+.action .imageB {
+  width: 329px;
+}
+.action .imageA {
+  width: 279px;
+}
+.action .img1 {
+  right: 10vh;
+  top: -10vh;
+}
+.action .img2 {
+  left: 54px;
+  top: 280px;
+}
+.action div {
+  position: absolute;
+  width: 447px;
+  top: 410px;
+  left: 438px;
+}
+.action div p {
+  width: 411px;
+  font-size: 1rem;
+  line-height: 3vh;
+}
+.action .img3 {
+  right: 0;
+  top: 665px;
+}
+.action .img4 {
+  left: 219px;
+  bottom: 700px;
+}
+.action .img5 {
+  right: 165px;
+  bottom: 583px;
+}
+.action .img6 {
+  left: 0px;
+  bottom: 320px;
+}
+.action .shirts {
+  width: 30%;
+  position: absolute;
+  left: 438px;
+  bottom: 310px;
+}
+.action .img7 {
+  position: absolute;
+  width: 438px;
+  right: 274px;
+  bottom: -68px;
+  z-index: -1;
+}
+
+.goldenbear {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw;
+  height: 1200px;
+  background-color: black;
+  color: white;
+  padding-top: 170px;
+}
+.goldenbear .number {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30vh;
+}
+.goldenbear .number .artist p {
+  font-family: "bold";
+  font-size: 1.8rem;
+}
+.goldenbear .number .artist p:nth-of-type(2) {
+  font-size: 1.15rem;
+  font-family: "work";
+  margin-top: 2vh;
+}
+.goldenbear .bears {
+  background-color: black;
+  position: relative;
+}
+.goldenbear .bears .img8 {
+  width: 730px;
+  left: 0;
+  top: 168px;
+}
+.goldenbear .bears .img9 {
+  width: 366px;
+  right: 130px;
+  top: 333px;
 }
 
 /*# sourceMappingURL=style.css.map */
