@@ -10,5 +10,43 @@
   font-family: "light";
   src: url("../fonts/Inter-Light.ttf");
 }
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header */
+header {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: black;
+  align-items: center;
+  gap: 15vh;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
+}
+header article {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1vh;
+}
+header article p {
+  font-size: 0.75rem;
+}
+header article h4 {
+  font-size: 4rem;
+}
+header article h4:nth-of-type(2) {
+  color: black;
+}
+header aside {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
 
 /*# sourceMappingURL=style.css.map */

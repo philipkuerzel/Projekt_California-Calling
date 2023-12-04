@@ -1,1 +1,45 @@
+@use 'variables' as variables;
+
+@use 'mixin' as mixins;
+
 @import "font";
+
+
+/* Global Styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+
+header {
+    @include mixins.flex;
+    color: white;
+    background-color: variables.$main-colorB;
+    align-items: center;
+    gap: 15vh;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    article {
+        @include mixins.flex;
+        text-align: center;
+        gap: 1vh;
+        p {
+            font-size: variables.$p-header;
+        }
+        h4 {
+            font-size: variables.$h4size;
+        }
+        h4:nth-of-type(2) {
+            color: variables.$main-colorB;
+        }
+    }
+    aside {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+    }
+}
