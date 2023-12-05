@@ -35,6 +35,19 @@ h3 {
   font-size: 5.1rem;
 }
 
+.button {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: 1px solid #AAA;
+  text-decoration: none;
+}
+.button:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+
 .image {
   position: absolute;
 }
@@ -70,18 +83,6 @@ header aside {
   display: flex;
   justify-content: space-between;
   width: 80%;
-}
-header aside .button {
-  background-color: black;
-  color: white;
-  padding: 10px;
-  border: 1px solid #AAA;
-  text-decoration: none;
-}
-header aside .button:hover {
-  background-color: white;
-  color: black;
-  transition: 0.3s;
 }
 
 /* Main */
@@ -166,7 +167,7 @@ header aside .button:hover {
   z-index: -1;
 }
 
-.goldenbear {
+.goldenbear, .rosebear {
   display: flex;
   flex-direction: column;
   padding: 0 10vw;
@@ -175,34 +176,95 @@ header aside .button:hover {
   color: white;
   padding-top: 170px;
 }
-.goldenbear .number {
+.goldenbear .number, .rosebear .number {
   display: flex;
   justify-content: space-between;
   width: 100%;
   gap: 30vh;
 }
-.goldenbear .number .artist p {
+.goldenbear .number .artist p, .rosebear .number .artist p {
   font-family: "bold";
   font-size: 1.8rem;
 }
-.goldenbear .number .artist p:nth-of-type(2) {
-  font-size: 1.15rem;
+.goldenbear .number .artist p:nth-of-type(2), .rosebear .number .artist p:nth-of-type(2) {
   font-family: "work";
   margin-top: 2vh;
 }
-.goldenbear .bears {
+.goldenbear .number .artist p:nth-of-type(2), .rosebear .number .artist p:nth-of-type(2) {
+  font-size: 1.15rem;
+}
+.goldenbear .bears, .rosebear .bears {
   background-color: black;
   position: relative;
+  width: 100%;
 }
-.goldenbear .bears .img8 {
-  width: 730px;
+.goldenbear .bears .img8, .rosebear .bears .img8 {
+  width: 65%;
   left: 0;
-  top: 168px;
+  top: 15vh;
 }
-.goldenbear .bears .img9 {
-  width: 366px;
-  right: 130px;
-  top: 333px;
+.goldenbear .bears .img9, .rosebear .bears .img9 {
+  width: 35%;
+  right: 10vh;
+  top: 35vh;
+}
+
+.circle {
+  position: relative;
+  overflow: hidden;
+  height: 40vh;
+  margin-bottom: 10vh;
+}
+.circle .rotation img {
+  position: absolute;
+  right: -12vw;
+  top: -15vh;
+  width: 35%;
+  z-index: -1;
+  animation: rotatetext 50s linear infinite;
+}
+@keyframes rotatetext {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rosebear {
+  background-color: rgb(241, 241, 241);
+}
+.rosebear article {
+  color: black;
+}
+.rosebear .img10 {
+  width: 65%;
+  right: 0;
+  top: 15vh;
+}
+.rosebear .img11 {
+  width: 35%;
+  left: 10vh;
+  top: 35vh;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  height: 70vh;
+  margin-top: 25vh;
+}
+footer .join {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10vw;
+  gap: 15vh;
+}
+footer .join .crawl {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
 
 /*# sourceMappingURL=style.css.map */

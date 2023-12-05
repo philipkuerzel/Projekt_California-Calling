@@ -17,10 +17,44 @@
     padding: 0 10vw;
 }
 
+@mixin number {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 30vh;
+        .artist p {
+            font-family: 'bold';
+            font-size: 1.8rem
+        }
+        .artist p:nth-of-type(2) {
+            font-family:'work';
+            margin-top: 2vh;
+        }
+    }
+
+
 @mixin button {
         background-color: black;
         color: white;
         padding: 10px;
         border: 1px solid #AAA;
         text-decoration: none;
+}
+
+@mixin rotation {
+        position: absolute;
+        right: -12vw;
+        top: -15vh;
+        width: 35%;
+        z-index: -1;
+        animation: rotatetext 50s linear infinite;
+    
+    @keyframes rotatetext {
+        0% {
+            transform:rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 }

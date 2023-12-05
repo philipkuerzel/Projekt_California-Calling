@@ -27,6 +27,15 @@ h3 {
     font-size: variables.$h3size;
 }
 
+.button {
+    @include mixins.button;
+    &:hover {
+        background-color: white;
+        color: black;
+        transition: 0.3s;
+        }
+    }
+
 .image {
     position: absolute
 }
@@ -60,14 +69,6 @@ header {
         display: flex;
         justify-content: space-between;
         width: 80%;
-        .button {
-        @include mixins.button;
-        &:hover {
-            background-color: white;
-            color: black;
-            transition: 0.3s;
-            }
-        }
     }
 }
 
@@ -155,39 +156,72 @@ header {
     }
 }
 
-.goldenbear {
+.goldenbear, .rosebear {
     @include mixins.bear;
     height: 1200px;
     background-color: variables.$main-colorB;
     color: variables.$main-colorW;
     padding-top: 170px;
     .number {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        gap: 30vh;
-        .artist p {
-            font-family: 'bold';
-            font-size: 1.8rem
-        }
+        @include mixins.number;
         .artist p:nth-of-type(2) {
-            font-size: variables.$p-artist;
-            font-family:'work';
-            margin-top: 2vh;
+        font-size: variables.$p-artist;
         }
     }
     .bears {
         background-color: variables.$main-colorB;
         position: relative;
+        width: 100%;
         .img8 {
-            width: 730px;
+            width: 65%;
             left: 0;
-            top: 168px;
+            top: 15vh;
         }
         .img9 {
-            width: 366px;
-            right: 130px;
-            top: 333px;
+            width: 35%;
+            right: 10vh;
+            top: 35vh;
+        }
+    }
+}
+.circle {
+    position: relative;
+    overflow: hidden;
+    height: 40vh;
+    margin-bottom: 10vh;
+    .rotation img {
+        @include mixins.rotation;
+    }
+}
+
+.rosebear {
+    background-color:rgb(241, 241, 241);
+    article {
+        color: black;
+    }
+    .img10 {
+        width: 65%;
+        right: 0;
+        top: 15vh;
+    }
+    .img11 {
+        width: 35%;
+        left: 10vh;
+        top: 35vh;
+    }
+}
+
+footer {
+    background-color: variables.$main-colorB;
+    color: variables.$main-colorW;
+    height: 70vh;
+    margin-top: 25vh;
+    .join {
+        @include mixins.bear;
+        gap: 15vh;
+        .crawl {
+            @include mixins.flex;
+            gap: 2vh;
         }
     }
 }
