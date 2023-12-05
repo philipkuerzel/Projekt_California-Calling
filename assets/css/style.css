@@ -309,21 +309,38 @@ footer .join .animation {
   transform: rotate(45deg);
   width: 75%;
   position: absolute;
-  left: 40%;
+  left: 35%;
   bottom: 45%;
 }
 footer .join .animation .banner {
-  display: flex;
   gap: 20px;
   color: black;
-  animation: banner 20s normal infinite forwards;
+  animation: banner 20s linear infinite forwards;
+}
+@keyframes banner {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(100%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 footer .join .animation .banner p {
-  font-size: 80px;
+  font-size: 5rem;
 }
-footer .join .animation .banner p:nth-of-type(2) {
+footer .join .animation .banner span {
   color: white;
   text-shadow: 0 0 2px black;
+  font-size: 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */

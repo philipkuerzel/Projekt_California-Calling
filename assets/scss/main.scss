@@ -271,28 +271,37 @@ footer {
             transform: rotate(45deg);
             width: 75%;
             position: absolute;
-            left: 40%;
+            left: 35%;
             bottom: 45%;
-            
             .banner {
-                display: flex;
+                
                 gap: 20px;
                 color: black;
-                animation: banner 20s normal infinite forwards;
-                // @keyframes banner {
-                //     0% {
-                //         transform: translate(0);
-                //     }
-                //     25% {
-                //         transform: translate(100%);
-                //     }
-                // }
-                p {
-                    font-size: 80px;
+                animation: banner 20s linear infinite forwards;
+                @keyframes banner {
+                    0% {
+                        transform: translateX(0);
+                    }
+                    25% {
+                        transform: translateX(100%);
+                    }
+                    50% {
+                        transform: translateX(0);
+                    }
+                    75% {
+                        transform: translateX(-100%);
+                    }
+                    100% {
+                        transform: translateX(0);
+                    }
                 }
-                p:nth-of-type(2) {
+                p {
+                    font-size: 5rem;
+                }
+                span {
                     color: white;
                     text-shadow: 0 0 2px black;
+                    font-size: 5rem;
                 }
             }
         }
